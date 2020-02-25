@@ -1,7 +1,7 @@
 {
-    "name": "puml-mind",
-    "displayName": "plantuml-mindmap-maker",
-    "description": "plantumlのためのマインドマップ作成支援",
+    "name": "plantuml-mindmap-diagram-supporter",
+    "displayName": "plantuml-mindmap-diagram-supporter",
+    "description": "mindmap用の+/-でincrement/decrementするだけのツール",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.42.0"
@@ -11,14 +11,18 @@
     ],
     "activationEvents": [
         "onCommand:extension.mindmapincrement",
+        "onCommand:extension.mindmapdecrement",
         "onLanguage:Diagram"
-
     ],
+
     "main": "./extension.js",
     "contributes": {
         "commands": [{
-            "command": "extension.mindmap.increment",
+            "command": "extension.mindmapincrement",
             "title": "plantumlで+を追加する"
+        }, {
+            "command": "extension.mindmapdecrement",
+            "title": "plantumlで-を追加する"
         }]
     },
     "scripts": {
