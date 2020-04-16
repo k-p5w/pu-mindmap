@@ -1,3 +1,4 @@
+// @ts-nocheck
 const vscode = require('vscode');
 
 // キーバインド想定：
