@@ -1,38 +1,46 @@
 # mindmap-diagram-supporter README
 
-plantumlでマインドマップを書くときに便利になるためのツール（VSCODE拡張）です。
-　 > https://plantuml.com/ja/mindmap-diagram
+plantumlで [マインドマップ記法](https://plantuml.com/ja/mindmap-diagram) 使うときの便利ツール（VSCODE拡張）です
 
 ## Features / どんなことができる
 
-テキストエディタ上で、文字が選択されていた場合に、[+]を追加する
-  > mindmapincrement
-テキストエディタ上で、文字が選択されていた場合に、[-]を追加する
-  > mindmapdecrement
+- 以下2コマンドが使用可能になります
+
+### mindmapincrement
+テキストエディタ上で、文字が選択されていた場合に、選択文字の先頭に[+]を追加する
+[-]で開始されている場合は、[-]を1つ削除
+
+### mindmapdecrement
+テキストエディタ上で、文字が選択されていた場合に、選択文字の先頭に[-]を追加する
+[+]で開始されている場合は、[+]を1つ削除
+
 
 ## Requirements /　使うために必要なもの
 
-+キーと-キーを追加するだけなので、無くても動きますが、vscodeのplantumlの拡張が入っていることを前提で作っています。
+- vscodeのplantumlの拡張(mindmapのプレビューのために作っているため)。
+- インストール後下記設定を行ってください（基本設定->キーボードショートカットでmindmapで探すと出てくるはず。）
+  
+  |cmd|オススメ設定|
+  |:--|:--|
+  |mindmapincrement|TAB|
+  |mindmapdecrement|TAB+SHIFT|
 
-## Extension Settings
+  - when式（無関係な拡張子で利用できなくするように設定）
+  > editorTextFocus && !editorReadonly && !editorTabMovesFocus && editorLangId == 'diagram'  
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Extension Settings / 拡張設定
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+vscodeの設定ファイルへの変更は不要です.
 
 ## Known Issues / 既知の課題や問題点
 
-改行コードの複数対応は未確認です。
+Windows10でのみ動作確認しています.
 
 ## Release Notes
 
 2020/02/22:それなりに動くものになる
 
-### 1.0.0
+
+### 0.0.1
 
 初回リリース。
