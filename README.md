@@ -25,8 +25,24 @@ plantumlで [マインドマップ記法](https://plantuml.com/ja/mindmap-diagra
   |mindmapincrement|TAB|
   |mindmapdecrement|TAB+SHIFT|
 
-  - when式（無関係な拡張子で利用できなくするように設定）
-  > editorTextFocus && !editorReadonly && !editorTabMovesFocus && editorLangId == 'diagram'  
+
+- キーボードショートカットに以下を設定する
+
+ ```keybindings.json
+     {
+        "key": "shift+tab",
+        "command": "extension.mindmapdecrement",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && editorLangId == plantuml"
+    },
+    {
+        "key": "tab",
+        "command": "extension.mindmapincrement",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && editorLangId == plantuml"
+    },
+ ```
+
+
+
 
 ## Extension Settings / 拡張設定
 
